@@ -1,5 +1,5 @@
-# Stock-Prediction
+# Pose-Estimation
 
 # pre requestion
 
-+ pip install pandas requests IPython jinja2
++ pip install opencv-python mediapipe
