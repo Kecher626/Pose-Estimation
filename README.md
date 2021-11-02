@@ -2,4 +2,8 @@
 
 # pre requestion
 
-+ pip install opencv-python mediapipe
++ pip install -r requirements.txt
+
+# HOW to Run
+
+py TestProject.py
