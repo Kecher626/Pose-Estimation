@@ -51,6 +51,21 @@ class poseDetector():
         if angle < 0:
             angle += 360
         return angle
+
+class FallDetector:
+    def __init__(self) -> None:
+        self.fall_position = (0, 0, 0)
+        self.fall_count = 0
+        pass
+
+    def update(self, frame_count, head, top, bot):
+        if frame_count == 0:
+            self.fall_position = (head, top, bot)
+        if self.fall_position[0] != 0:
+            if (2*float(self.fall_position[0][2]) < float(head[2])):
+                self.fall_count += 1
+                self.fall_position = (head, top, bot)
+        return self.fall_count
  
 def main():
     cap = cv2.VideoCapture(0)
