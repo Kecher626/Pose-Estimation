@@ -67,7 +67,7 @@ class FallDetector:
             if self.fall_position[0] != 0:
                 if (2*float(self.fall_position[0][2]) < float(head[2])):
                     if (abs(top[1]-bot[1]) > 1.5*(abs(self.fall_position[1][1] - self.fall_position[2][1])) and 
-                        abs(top[2]-bot[2]) < 0.25 * abs(self.fall_position[1][2] - self.fall_position[2][2])):
+                        abs(top[2]-bot[2]) < 0.3 * abs(self.fall_position[1][2] - self.fall_position[2][2])):
                         self.fall_count += 1
                         print("=============")
                         print(top[2])
